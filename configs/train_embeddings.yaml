@@ -1,0 +1,33 @@
+# CONSTANTS YOU NEED TO MODIFY
+settings:
+  CUDA: true
+  DATA_HOME: "./data"
+  LOG_DIR: "./result/embeddings"
+  PRINT_TEST: false
+
+# CONSTANTS YOU MAY WANT TO MODIFY (BUT DON'T NEED TO)
+paths:
+  TRAIN_DATA: "{LOG_DIR}/preprocessed_train_data.pkl"
+  VAL_DATA: "{LOG_DIR}/preprocessed_val_data.pkl"
+  TEST_DATA: "{LOG_DIR}/preprocessed_test_data.pkl"
+
+  WORD_EMBEDS: "{DATA_HOME}/embeddings/glove_word_embeds.txt"
+  USER_EMBEDS: "{DATA_HOME}/embeddings/user_vecs.npy"
+  USER_IDS: "{DATA_HOME}/embeddings/user_vecs.vocab"
+  SUBREDDIT_EMBEDS: "{DATA_HOME}/embeddings/sub_vecs.npy"
+  SUBREDDIT_IDS: "{DATA_HOME}/embeddings/sub_vecs.vocab"
+  POST_INFO: "{DATA_HOME}/detailed_data/post_crosslinks_info.tsv"
+  LABEL_INFO: "{DATA_HOME}/detailed_data/label_info.tsv"
+  PREPROCESSED_DATA: "{DATA_HOME}/detailed_data/tokenized_posts.tsv"
+  META_FEATURE: "{DATA_HOME}/detailed_data/handcrafted_features.tsv"
+
+constants:
+  BATCH_SIZE: 512
+  VOCAB_SIZE: 174558
+  NUM_USERS: 118381
+  NUM_SUBREDDITS: 51278
+  WORD_EMBED_DIM: 300
+  METAFEAT_LEN: 263
+  NUM_CLASSES: 1
+  MAX_LEN: 50
+  SF_LEN: 263

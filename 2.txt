@@ -1,0 +1,6 @@
+9 170 0.27057378620207334
+9 170 0.27057378620207334
+9 180 0.2732687095599769
+9 180 0.2732687095599769
+Overall best val: (0.7288724127300076, 3, 0)
+(dl) PS D:\0-DOCUMENTS\COMP573\GCN-LSTM> python .\generate_embeddings.py --include_meta --final_dense --final_layer_social

@@ -1,0 +1,49 @@
+# CONSTANTS YOU NEED TO MODIFY
+settings:
+  CUDA: true
+  DATA_HOME: "./data"
+  LOG_DIR: "./result/evaluate"
+  EMBEDDINGS: "./result/embeddings"
+  PRINT_TEST: false
+
+# CONSTANTS YOU MAY WANT TO MODIFY (BUT DON'T NEED TO)
+paths:
+  TRAIN_DATA: "{EMBEDDINGS}/preprocessed_train_data.pkl"
+  VAL_DATA: "{EMBEDDINGS}/preprocessed_val_data.pkl"
+  TEST_DATA: "{EMBEDDINGS}/preprocessed_test_data.pkl"
+
+  WORD_EMBEDS: "{DATA_HOME}/embeddings/glove_word_embeds.txt"
+  USER_EMBEDS: "{DATA_HOME}/embeddings/user_vecs.npy"
+  USER_IDS: "{DATA_HOME}/embeddings/user_vecs.vocab"
+  SUBREDDIT_EMBEDS: "{DATA_HOME}/embeddings/sub_vecs.npy"
+  SUBREDDIT_IDS: "{DATA_HOME}/embeddings/sub_vecs.vocab"
+  POST_INFO: "{DATA_HOME}/detailed_data/post_crosslinks_info.tsv"
+  LABEL_INFO: "{DATA_HOME}/detailed_data/label_info.tsv"
+  PREPROCESSED_DATA: "{DATA_HOME}/detailed_data/tokenized_posts.tsv"
+
+  log_file: "{LOG_DIR}/evaluate_log.txt"  # Use 'null' for None, or specify a path like "./logs/training_log.txt"
+
+constants:
+  BATCH_SIZE: 512
+  VOCAB_SIZE: 174558
+  NUM_USERS: 118381
+  NUM_SUBREDDITS: 51278
+  WORD_EMBED_DIM: 300
+  METAFEAT_LEN: 263
+  NUM_CLASSES: 1
+  MAX_LEN: 50
+  SF_LEN: 263
+
+training:
+  epochs: 10
+  learning_rate: 0.01
+  log_every: 100
+  hidden_dim: 64
+  save_embeds: false
+  dropout: 0.2
+  single_layer: false
+  include_meta: false
+  final_dense: true
+  lstm_append_social: false
+  lstm_no_social: false
+  final_layer_social: true
